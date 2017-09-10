@@ -44,7 +44,7 @@ let x = 0
 
 const movingBg = () => {
     x = x + 0.2
-    let bgPosition = document.getElementById('body').style.backgroundPosition = x +'%' + '0%'
+    let bgPosition = document.getElementById('body').style.backgroundPosition = `${x}% 0%`
     // console.log(bgPosition)
     setTimeout(movingBg, 30)
 }
