@@ -1,6 +1,16 @@
+ body {
+     background-size: 115%;
+ }
 
+ #time {
+     font-size: (100/16)*1rem;
+     font-weight: 600;
+     margin: 0 0 0 5px;
+ }
 
-#time {
-    font-size: (60/16)*1rem;
-    font-weight: bold;
-}
+ #today,
+ #whatday {
+     font-size: (50/16)*1rem;
+     font-weight: 600;
+     margin: 0 0 0 10px;
+ }
