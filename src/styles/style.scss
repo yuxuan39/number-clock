@@ -9,12 +9,21 @@
      margin: 0 0 0 10px;
  }
 
+ .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 600px;
+ }
+
 
  .number-container {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
      width: 480px;
+     padding: 20px;
  }
 
  .number {
@@ -22,21 +31,21 @@
      height: 120px;
      position: relative;
      .top {
-         background-color: black;
+         background-color: #0efbfb;
          width: 45px;
          height: 10px;
          position: absolute;
          left: (65-45)/2*1px;
      }
      .top-left {
-         background-color: black;
+         background-color: #0efbfb;
          width: 10px;
          height: 45px;
          position: absolute;
          top: 10px;
      }
      .top-right {
-         background-color: black;
+         background-color: #0efbfb;
          width: 10px;
          height: 45px;
          position: absolute;
@@ -44,7 +53,7 @@
          left: 55px;
      }
      .center {
-         background-color: black;
+         background-color: #0efbfb;
          width: 45px;
          height: 10px;
          position: absolute;
@@ -52,14 +61,14 @@
          top: 55px;
      }
      .bottom-left {
-         background-color: black;
+         background-color: #0efbfb;
          width: 10px;
          height: 45px;
          position: absolute;
          top: 65px;
      }
      .bottom-right {
-         background-color: black;
+         background-color: #0efbfb;
          width: 10px;
          height: 45px;
          position: absolute;
@@ -67,7 +76,7 @@
          left: 55px;
      }
      .bottom {
-         background-color: black;
+         background-color: #0efbfb;
          width: 45px;
          height: 10px;
          position: absolute;
@@ -80,14 +89,14 @@
      width: 10px;
      position: relative;
      .top-colon {
-         background-color: black;
+         background-color: #0efbfb;
          width: 10px;
          height: 10px;
          position: absolute;
          top: 34px;
      }
      .bottom-colon {
-         background-color: black;
+         background-color: #0efbfb;
          width: 10px;
          height: 10px;
          position: absolute;
@@ -169,6 +178,6 @@
 
  .no9 {
      .bottom-left {
-         opacity: 0.3;
+         opacity: 0.1;
      }
  }
