@@ -2,15 +2,173 @@
      background-size: 115%;
  }
 
- #time {
-     font-size: (100/16)*1rem;
-     font-weight: 600;
-     margin: 0 0 0 5px;
- }
-
  #today,
  #whatday {
      font-size: (50/16)*1rem;
      font-weight: 600;
      margin: 0 0 0 10px;
+ }
+
+
+ .number-container {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 480px;
+ }
+
+ .number {
+     width: 65px;
+     height: 120px;
+     position: relative;
+     .top {
+         background-color: black;
+         width: 45px;
+         height: 10px;
+         position: absolute;
+         left: (65-45)/2*1px;
+     }
+     .top-left {
+         background-color: black;
+         width: 10px;
+         height: 45px;
+         position: absolute;
+         top: 10px;
+     }
+     .top-right {
+         background-color: black;
+         width: 10px;
+         height: 45px;
+         position: absolute;
+         top: 10px;
+         left: 55px;
+     }
+     .center {
+         background-color: black;
+         width: 45px;
+         height: 10px;
+         position: absolute;
+         left: (65-45)/2*1px;
+         top: 55px;
+     }
+     .bottom-left {
+         background-color: black;
+         width: 10px;
+         height: 45px;
+         position: absolute;
+         top: 65px;
+     }
+     .bottom-right {
+         background-color: black;
+         width: 10px;
+         height: 45px;
+         position: absolute;
+         top: 65px;
+         left: 55px;
+     }
+     .bottom {
+         background-color: black;
+         width: 45px;
+         height: 10px;
+         position: absolute;
+         left: (65-45)/2*1px;
+         top: 110px;
+     }
+ }
+
+ .colon-container {
+     width: 10px;
+     position: relative;
+     .top-colon {
+         background-color: black;
+         width: 10px;
+         height: 10px;
+         position: absolute;
+         top: 34px;
+     }
+     .bottom-colon {
+         background-color: black;
+         width: 10px;
+         height: 10px;
+         position: absolute;
+         bottom: 34px;
+     }
+ }
+
+ .no0 {
+     .center {
+         opacity: 0.1;
+     }
+ }
+
+ .no1 {
+     .top,
+     .top-left,
+     .center,
+     .bottom-left,
+     .bottom {
+         opacity: 0.1;
+     }
+ }
+
+ .no2 {
+     .top-left,
+     .bottom-right {
+         opacity: 0.1;
+     }
+ }
+
+ .no3 {
+     .top-left,
+     .bottom-left {
+         opacity: 0.1;
+     }
+ }
+
+ .no4 {
+     .top,
+     .bottom-left,
+     .bottom {
+         opacity: 0.1;
+     }
+ }
+
+ .no5 {
+     .top-right,
+     .bottom-left {
+         opacity: 0.1;
+     }
+ }
+
+ .no6 {
+     .top-right {
+         opacity: 0.1;
+     }
+ }
+
+ .no7 {
+     .top-left,
+     .bottom-left,
+     .center,
+     .bottom {
+         opacity: 0.1;
+     }
+ }
+
+ .no8 {
+     .top,
+     .top-left,
+     .center,
+     .bottom-left,
+     .bottom,
+     .top-right,
+     .bottom-right {
+         opacity: 1;
+     }
+ }
+
+ .no9 {
+     .bottom-left {
+         opacity: 0.3;
+     }
  }
