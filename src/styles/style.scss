@@ -10,13 +10,13 @@
  }
 
  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    width: 600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 15px;
+     background-color: black;
+     width: 600px;
  }
-
 
  .number-container {
      display: flex;

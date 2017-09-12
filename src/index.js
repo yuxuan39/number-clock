@@ -24,25 +24,31 @@ const updateTime = () => {
     }
 
 
-    changeNumber(hr, min, sec)
+    renderTime(hr, min, sec)
     setTimeout(updateTime, 1000)
 }
 
-const changeNumber = (hr, min, sec) => {
+const resetDigits = (digits) => {
+    digits.forEach(digit => digit.classList = 'number')
+}
+
+const renderTime = (hr, min, sec) => {
     const hourTD = hr.toString()[0]
     const hourUD = hr.toString()[1]
     const minTD = min.toString()[0]
     const minUD = min.toString()[1]
     const secTD = sec.toString()[0]
     const secUD = sec.toString()[1]
-    
-    hr1.classList = 'number'
-    hr2.classList = 'number'
-    min1.classList = 'number'
-    min2.classList = 'number'
-    sec1.classList = 'number'
-    sec2.classList = 'number'
 
+    const digits = [hr1, hr2, min1, min2, sec1, sec2]
+    resetDigits(digits)
+    
+    // hr1.classList = 'number'
+    // hr2.classList = 'number'
+    // min1.classList = 'number'
+    // min2.classList = 'number'
+    // sec1.classList = 'number'
+    // sec2.classList = 'number'
 
     hr1.classList.add(`no${hourTD}`)
     hr2.classList.add(`no${hourUD}`)
