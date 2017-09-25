@@ -1,5 +1,5 @@
 import './styles/style.scss'
-import {updateTime as fetchTime} from './fetch.js' 
+import moment from 'moment'
 
 const hr1 = document.getElementById('hr1')
 const hr2 = document.getElementById('hr2')
@@ -8,24 +8,36 @@ const min2 = document.getElementById('min2')
 const sec1 = document.getElementById('sec1')
 const sec2 = document.getElementById('sec2')
 
+
+
 const updateTime = () => {
-    const date = new Date()
-    let hr = date.getHours()
-    let min = date.getMinutes()
-    let sec = date.getSeconds()
+    const HOST = 'https://free-gce.akiya.com.tw/utils/now'
+    fetch(HOST, {
+        method: 'GET'
+    }).then(res => {
+        return res.json()
+        console.log('res', res)
+    }).then(data => {
+        let time = data.data.now
+        let sec = moment(time).second().toString()
+        let min = moment(time).minute().toString().toString()
+        let hr = moment(time).hour().toString()
 
-    if (hr < 10) {
-        hr = `0${hr}`
-    }
-    if (min < 10) {
-        min = `0${min}`
-    }
-    if (sec < 10) {
-        sec = `0${sec}`
-    }
-
-    changeNumber(hr, min, sec)
-    setTimeout(updateTime, 1000)
+        if (hr < 10) {
+            hr = `0${hr}`
+        }
+        if (min < 10) {
+            min = `0${min}`
+        }
+        if (sec < 10) {
+            sec = `0${sec}`
+        }
+        console.log(hr, min, sec)
+        changeNumber(hr, min, sec)
+        setTimeout(updateTime, 800)
+    }).catch(err => {
+        console.log('err', err)
+    })
 }
 
 const changeNumber = (hr, min, sec) => {
@@ -54,3 +66,8 @@ const changeNumber = (hr, min, sec) => {
 }
 
 updateTime()
+
+
+
+
+export {updateTime}
