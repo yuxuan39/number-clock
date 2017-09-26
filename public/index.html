@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-  <title>{TITLE_NOT_SET}</title>
+  <title>Number Clock</title>
 </head>
-<body>
-  <div id="root"></div>
+<body background="background.jpg">
+  <div class="btn">
+    <input type="checkbox" id="toggle_today_summary" name="" value="">
+    <div class="toggle">
+      <label for="toggle_today_summary">
+        <i></i>
+      </label>
+    </div>
+  </div>
+  <div class="box">
+    <div class='number-container'>
+      <div class="number" id="hr1">
+        <div class="top"></div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="center"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="number" id="hr2">
+        <div class="top"></div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="center"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="colon-container">
+        <div class='top-colon'></div>
+        <div class='bottom-colon'></div>
+      </div>
+      <div class="number" id="min1">
+        <div class="top"></div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="center"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="number" id="min2">
+        <div class="top"></div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="center"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="colon-container">
+        <div class='top-colon'></div>
+        <div class='bottom-colon'></div>
+      </div>
+      <div class="number" id="sec1">
+        <div class="top"></div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="center"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="number" id="sec2">
+        <div class="top"></div>
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="center"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
