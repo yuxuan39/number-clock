@@ -1,21 +1,249 @@
- body {
-     display: flex;
-     justify-content: center;
-     background-size: 115%;
- }
+html {
+  height: 100%;
+}
 
- #container {
-     #time {
-         display: flex;
-         justify-content: center;
-         font-size: (100/16)*1rem;
-         font-weight: 600;
-     }
-     #today,
-     #whatday {
-         display: flex;
-         justify-content: center;
-         font-size: (50/16)*1rem;
-         font-weight: 600;
-     }
- }
+body {
+  background-size: 115%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.number-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 480px;
+  padding: 20px;
+}
+
+.number {
+  width: 65px;
+  height: 120px;
+  position: relative;
+  .top {
+    background-color: #0efbfb;
+    width: 45px;
+    height: 10px;
+    position: absolute;
+    left: (65-45)/2*1px;
+  }
+  .top-left {
+    background-color: #0efbfb;
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    top: 10px;
+  }
+  .top-right {
+    background-color: #0efbfb;
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    top: 10px;
+    left: 55px;
+  }
+  .center {
+    background-color: #0efbfb;
+    width: 45px;
+    height: 10px;
+    position: absolute;
+    left: (65-45)/2*1px;
+    top: 55px;
+  }
+  .bottom-left {
+    background-color: #0efbfb;
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    top: 65px;
+  }
+  .bottom-right {
+    background-color: #0efbfb;
+    width: 10px;
+    height: 45px;
+    position: absolute;
+    top: 65px;
+    left: 55px;
+  }
+  .bottom {
+    background-color: #0efbfb;
+    width: 45px;
+    height: 10px;
+    position: absolute;
+    left: (65-45)/2*1px;
+    top: 110px;
+  }
+}
+
+.colon-container {
+  width: 10px;
+  position: relative;
+  .top-colon {
+    background-color: #0efbfb;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 34px;
+  }
+  .bottom-colon {
+    background-color: #0efbfb;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 34px;
+  }
+}
+
+.no0 {
+  .center {
+    opacity: 0.1;
+  }
+}
+
+.no1 {
+  .top,
+  .top-left,
+  .center,
+  .bottom-left,
+  .bottom {
+    opacity: 0.1;
+  }
+}
+
+.no2 {
+  .top-left,
+  .bottom-right {
+    opacity: 0.1;
+  }
+}
+
+.no3 {
+  .top-left,
+  .bottom-left {
+    opacity: 0.1;
+  }
+}
+
+.no4 {
+  .top,
+  .bottom-left,
+  .bottom {
+    opacity: 0.1;
+  }
+}
+
+.no5 {
+  .top-right,
+  .bottom-left {
+    opacity: 0.1;
+  }
+}
+
+.no6 {
+  .top-right {
+    opacity: 0.1;
+  }
+}
+
+.no7 {
+  .top-left,
+  .bottom-left,
+  .center,
+  .bottom {
+    opacity: 0.1;
+  }
+}
+
+.no8 {
+  .top,
+  .top-left,
+  .center,
+  .bottom-left,
+  .bottom,
+  .top-right,
+  .bottom-right {
+    opacity: 1;
+  }
+}
+
+.no9 {
+  .bottom-left {
+    opacity: 0.1;
+  }
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  bottom: 20px;
+  margin: 0;
+  width: 51px;
+  height: 31px;
+}
+
+.toggle label,
+.toggle i {
+  box-sizing: border-box;
+  display: block;
+  background: #ffffff;
+}
+
+.toggle label {
+  width: 51px;
+  height: 32px;
+  border-radius: 32px;
+  border: 2px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.toggle i {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25), 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.275, -0.45, 0.725, 1.45);
+}
+
+input[type='checkbox']:active + .toggle i {
+  width: 35px;
+}
+
+input[type='checkbox']:active + .toggle label,
+input[type='checkbox']:checked + .toggle label {
+  border: 16px solid #ffee05;
+}
+
+input[type='checkbox']:checked + .toggle i {
+  left: 21px;
+}
+
+input[type='checkbox']:checked:active + .toggle label {
+  border: 16px solid #e5e5e5;
+}
+
+input[type='checkbox']:checked:active + .toggle i {
+  left: 14px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
